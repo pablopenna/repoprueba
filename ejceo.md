@@ -13,28 +13,6 @@ Ej1.
     ```
     Este comando crea una carpeta con el contenido del repo.
 
-    Si el README.md lo quieres crear en tu máquina en vez de en github, crea el fichero `README.md` en la carpeta que se ha creado y haz los cambios que quieras.
-
-    Una vez hecho eso, para incluir los cambios que hemos hecho localmente en el repo:
-    1. `git add README.md`
-    
-    Con git add señalamos los archivos cuyos cambios queremos incluir en el repo.
-    
-    2. `git commit -m "<MENSAJE>"`
-
-    Con `git commit` creamos el commit con los cambios. Un commit es un nodo del árbol con todos los cambios en nuestro repro. Cada commit contiene una serie de cambios en los ficheros de nuestro repro.
-
-    Ejemplo:
-    ```
-    git commit -m "Modificado el README.md"
-    ```
-
-    Una vez hecho esto, tenemos los cambios solo en local. A continuación los mandaremos al repo.
-
-    3. `git push origin master`
-
-    Al terminar el comando, nuestros cambios deberían estar presentes en el repo.
-
 * Crea una rama y escribe texto random en el README. Commitea los cambios y subelos a github de nuevo en una rama.
 
     Para hacer esta tarea, primero crearemos la rama en local, haremos los cambios y despúes mandaremos los cambios junto con la nueva rama a nuestro repo.
@@ -53,7 +31,7 @@ Ej1.
     git checkout ramaB
     ```
 
-    Con esto ya estamos en la nueva rama, los cambios que hagamos ahora no afectaran a la rama principal aunque hagamos commit.
+    Con esto ya estamos en la nueva rama, los cambios que hagamos ahora se harán en esta y no en la princiapl.
 
     A continuación, cambiar el texto en el README. Yo simplemente he borrado todo y he escrito "random".
 
@@ -89,7 +67,7 @@ Ej1.
 
 * Mergea la rama en master.
 
-Mergear ramas no se puede hacer directamente en remoto. Para ello, tendremos que hacer primer un mergo en nuestro repo local (en nuestro PC) y después enviar el resultado al repo.
+Mergear ramas no se puede hacer directamente en el repo. Para ello, tendremos que hacer primer un merge en nuestro repo local (en nuestro PC) y después enviar el resultado de la operación al repo.
 
 En nuestro caso, si queremos incorporar los cambios de nuestra ramaB en nuestra rama principal "master".
 
@@ -101,7 +79,7 @@ git checkout master
 ```
 git merge ramaB
 ```
-Esto lo que hace es incorporar el/los commits extra en la ramaB en master.
+Esto lo que hace es incorporar el/los commits extra de la ramaB en master.
 
 * Enviar cambios al repo
 
@@ -109,7 +87,7 @@ Esto lo que hace es incorporar el/los commits extra en la ramaB en master.
 git push origin master
 ```
 
-Con esto, si comprobamos los commits de nuestro repo, el commit que hicimos en la ramaB debería figurar ahora en nuestra rama master.
+Con esto, si comprobamos los commits de nuestro repo, el commit que hicimos en la ramaB debería figurar ahora también en nuestra rama master.
 
 
 
